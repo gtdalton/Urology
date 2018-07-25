@@ -1,0 +1,100 @@
+{% extends "layout.html" %}
+
+{% block main %}
+    <div class="jumbotron">
+      <p>
+        Many people leak urine some of the time.  We are trying to find out how
+        many people leak urine, and how much this bothers them. We would be
+        grateful if you could answer the following questions, thinking about how
+         you have been, on average, over the PAST FOUR WEEKS.
+      </p>
+
+      <form id="iciqui">
+          <h4>How often do you leak urine?</h4>
+          <div class="form-check">
+            <input id="leak0" class="form-check-input" type="radio" name="leak" value="0"/>
+            <label for="leak0" class="form-check-label">Never</label>
+          </div>
+          <div class="form-check">
+            <input id="leak1" class="form-check-input" type="radio" name="leak" value="1"/>
+            <label for="leak1" class="form-check-label">About once a week or less often</label>
+          </div>
+          <div class="form-check">
+            <input id="leak2" class="form-check-input" type="radio" name="leak" value="2"/>
+            <label for="leak2" class="form-check-label">Two or three times a week</label>
+          </div>
+          <div class="form-check">
+            <input id="leak3" class="form-check-input" type="radio" name="leak" value="3"/>
+            <label for="leak3" class="form-check-label">About once a day</label>
+          </div>
+          <div class="form-check">
+            <input id="leak4" class="form-check-input" type="radio" name="leak" value="4"/>
+            <label for="leak4" class="form-check-label">Several times a day</label>
+          </div>
+          <div class="form-check">
+            <input id="leak5" class="form-check-input" type="radio" name="leak" value="5"/>
+            <label for="leak5" class="form-check-label">All the time</label>
+          </div>
+          <h4>We would like to know how much urine you think leaks.</h4>
+          <h4>How much urine do you usually leak (whether you wear protection or not)?</h4>
+          <div class="form-check">
+            <input id="volume1" class="form-check-input" type="radio" name="volume" value="0"/>
+            <label for="volume1" class="form-check-label">None</label>
+          </div>
+          <div class="form-check">
+            <input id="volume2" class="form-check-input" type="radio" name="volume" value="2"/>
+            <label for="volume2" class="form-check-label">A small amount</label>
+          </div>
+          <div class="form-check">
+            <input id="volume3" class="form-check-input" type="radio" name="volume" value="4"/>
+            <label for="volume3" class="form-check-label">A moderate amount</label>
+          </div>
+          <div class="form-check">
+            <input id="volume4" class="form-check-input" type="radio" name="volume" value="6"/>
+            <label for="volume4" class="form-check-label">A large amount</label>
+          </div>
+          <h4>Overall, how much does leaking urine interfere with your everyday life?</h4>
+          <div>
+            <label for="leakRange">Not at all</label>
+            <input type="range" class="custom-range" min="0" max="10" id="leakRange" >
+            <label for="healthRange">A great deal</label>
+          </div>
+          <h4>When does urine leak?</h4>
+          <div class="form-check">
+            <input id="occassion1" class="form-check-input" type="checkbox" name="occassions" value="0"/>
+            <label for="occassion1" class="form-check-label">Never – urine does not leak</label>
+          </div>
+          <div class="form-check">
+            <input id="occassion2" class="form-check-input leakGroup" type="checkbox" name="occassions" value="1"/>
+            <label for="occassion2" class="form-check-label">Leaks before you can get to the toilet</label>
+          </div>
+          <div class="form-check">
+            <input id="occassion3" class="form-check-input leakGroup" type="checkbox" name="occassions" value="1"/>
+            <label for="occassion3" class="form-check-label">Leaks when you cough or sneeze</label>
+          </div>
+          <div class="form-check">
+            <input id="occassion4" class="form-check-input leakGroup" type="checkbox" name="occassions" value="1"/>
+            <label for="occassion4" class="form-check-label">Leaks when you are asleep</label>
+          </div>
+          <div class="form-check">
+            <input id="occassion5" class="form-check-input leakGroup" type="checkbox" name="occassions" value="1"/>
+            <label for="occassion5" class="form-check-label">Leaks when you are physically active/exercising</label>
+          </div>
+          <div class="form-check">
+            <input id="occassion6" class="form-check-input leakGroup" type="checkbox" name="occassions" value="1"/>
+            <label for="occassion6" class="form-check-label">Leaks when you have finished urinating and are dressed</label>
+          </div>
+          <div class="form-check">
+            <input id="occassion7" class="form-check-input leakGroup" type="checkbox" name="occassions" value="1"/>
+            <label for="occassion7" class="form-check-label">Leaks for no obvious reason</label>
+          </div>
+          <div class="form-check">
+            <input id="occassion8" class="form-check-input" type="checkbox" name="occassions" value="1"/>
+            <label for="occassion8" class="form-check-label">Leaks all the time</label>
+          </div>
+          <h2>score</h2>
+          <h4 id="score"></h4>
+          <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+{% endblock %}

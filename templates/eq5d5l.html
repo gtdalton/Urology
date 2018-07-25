@@ -1,0 +1,137 @@
+{% extends "layout.html" %}
+
+{% block main %}
+
+    <div class="jumbotron">
+      <form id="eq5d5l">
+          <h4>MOBILITY</h4>
+          <div class="form-check">
+            <input id="mob1" class="form-check-input" type="radio" name="mobility" value="1"/>
+            <label for="mob1" class="form-check-label">I have no problems in walking about</label>
+          </div>
+          <div class="form-check">
+            <input id="mob2" class="form-check-input" type="radio" name="mobility" value="2"/>
+            <label for="mob2" class="form-check-label">I have slight problems in walking about</label>
+          </div>
+          <div class="form-check">
+            <input id="mob3" class="form-check-input" type="radio" name="mobility" value="3"/>
+            <label for="mob3" class="form-check-label">I have moderate problems in walking about</label>
+          </div>
+          <div class="form-check">
+            <input id="mob4" class="form-check-input" type="radio" name="mobility" value="4"/>
+            <label for="mob4" class="form-check-label">I have severe problems in walking about</label>
+          </div>
+          <div class="form-check">
+            <input id="mob5" class="form-check-input" type="radio" name="mobility" value="5"/>
+            <label for="mob5" class="form-check-label">I am unable to walk about</label>
+          </div>
+          <h4>SELF-CARE</h4>
+          <div class="form-check">
+            <input id="self1" class="form-check-input" type="radio" name="selfcare" value="1"/>
+            <label for="self1" class="form-check-label">I have no problems washing or dressing myself</label>
+          </div>
+          <div class="form-check">
+            <input id="self2" class="form-check-input" type="radio" name="selfcare" value="2"/>
+            <label for="self2" class="form-check-label">I have slight problems washing or dressing myself</label>
+          </div>
+          <div class="form-check">
+            <input id="self3" class="form-check-input" type="radio" name="selfcare" value="3"/>
+            <label for="self3" class="form-check-label">I have moderate problems washing or dressing myself</label>
+          </div>
+          <div class="form-check">
+            <input id="self4" class="form-check-input" type="radio" name="selfcare" value="4"/>
+            <label for="self4" class="form-check-label">I have severe problems washing or dressing myself</label>
+          </div>
+          <div class="form-check">
+            <input id="self5" class="form-check-input" type="radio" name="selfcare" value="5"/>
+            <label for="self5" class="form-check-label">I am unable to wash or dress myself</label>
+          </div>
+          <h4>USUAL ACTIVITIES (e.g. work, study, housework, family or leisure activities)</h4>
+          <div class="form-check">
+            <input id="active1" class="form-check-input" type="radio" name="activities" value="1"/>
+            <label for="active1" class="form-check-label">I have no problems doing my usual activities</label>
+          </div>
+          <div class="form-check">
+            <input id="active2" class="form-check-input" type="radio" name="activities" value="2"/>
+            <label for="active2" class="form-check-label">I have slight problems doing my usual activities</label>
+          </div>
+          <div class="form-check">
+            <input id="active3" class="form-check-input" type="radio" name="activities" value="3"/>
+            <label for="active3" class="form-check-label">I have moderate problems doing my usual activities</label>
+          </div>
+          <div class="form-check">
+            <input id="active4" class="form-check-input" type="radio" name="activities" value="4"/>
+            <label for="active4" class="form-check-label">I have severe problems doing my usual activities</label>
+          </div>
+          <div class="form-check">
+            <input id="active5" class="form-check-input" type="radio" name="activities" value="5"/>
+            <label for="active5" class="form-check-label">I am unable to do my usual activities</label>
+          </div>
+          <h4>PAIN / DISCOMFORT</h4>
+          <div class="form-check">
+            <input id="pain1" class="form-check-input" type="radio" name="pain" value="1"/>
+            <label for="pain1" class="form-check-label">I have no pain or discomfort</label>
+          </div>
+          <div class="form-check">
+            <input id="pain2" class="form-check-input" type="radio" name="pain" value="2"/>
+            <label for="pain2" class="form-check-label">I have slight pain or discomfort</label>
+          </div>
+          <div class="form-check">
+            <input id="pain3" class="form-check-input" type="radio" name="pain" value="3"/>
+            <label for="pain3" class="form-check-label">I have moderate pain or discomfort</label>
+          </div>
+          <div class="form-check">
+            <input id="pain4" class="form-check-input" type="radio" name="pain" value="4"/>
+            <label for="pain4" class="form-check-label">I have severe pain or discomfort</label>
+          </div>
+          <div class="form-check">
+            <input id="pain5" class="form-check-input" type="radio" name="pain" value="5"/>
+            <label for="pain5" class="form-check-label">I have extreme pain or discomfort</label>
+          </div>
+          <h4>ANXIETY / DEPRESSION</h4>
+          <div class="form-check">
+            <input id="anxiety1" class="form-check-input" type="radio" name="anxiety" value="1"/>
+            <label for="anxiety1" class="form-check-label">I am not anxious or depressed</label>
+          </div>
+          <div class="form-check">
+            <input id="anxiety2" class="form-check-input" type="radio" name="anxiety" value="2"/>
+            <label for="anxiety2" class="form-check-label">I am slightly anxious or depressed</label>
+          </div>
+          <div class="form-check">
+            <input id="anxiety3" class="form-check-input" type="radio" name="anxiety" value="3"/>
+            <label for="anxiety3" class="form-check-label">I am moderately anxious or depressed</label>
+          </div>
+          <div class="form-check">
+            <input id="anxiety4" class="form-check-input" type="radio" name="anxiety" value="4"/>
+            <label for="anxiety4" class="form-check-label">I am severely anxious or depressed</label>
+          </div>
+          <div class="form-check">
+            <input id="anxiety5" class="form-check-input" type="radio" name="anxiety" value="5"/>
+            <label for="anxiety5" class="form-check-label">I am extremely anxious or depressed</label>
+          </div>
+          <h4>HEALTH</h4>
+          <ul>
+            <li>
+              We would like to know how good or bad your health is TODAY.
+            </li>
+            <li>
+              This scale is numbered from 0 to 100.
+            </li>
+            <li>
+              100 means the <strong>best</strong> health you can imagine.
+            </li>
+            <li>
+              0 means the <strong>worst</strong> health you can imagine.
+            </li>
+          </ul>
+          <div>
+            <label for="healthRange">Worst Health</label>
+            <input type="range" class="custom-range" min="0" max="100" id="healthRange" >
+            <label for="healthRange">Best Health</label>
+          </div>
+
+
+          <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+{% endblock %}

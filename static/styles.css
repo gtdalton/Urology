@@ -1,0 +1,11 @@
+#logo{
+  width: 100px;
+}
+li{
+  font-weight: bold;
+}
+
+ol>li>ol{
+  list-style-type:lower-alpha;
+  font-weight: lighter;
+}

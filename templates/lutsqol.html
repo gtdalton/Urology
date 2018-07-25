@@ -1,0 +1,513 @@
+{% extends "layout.html" %}
+
+{% block main %}
+    <div class="jumbotron">
+      <h4>Quality of life</h4>
+      <p>
+        Below are some daily activities that can be affected by urinary problems.
+        How much does your urinary problem affect you? We would like you to
+        answer every question. Simply tick the box that applies to you. We would
+        be grateful if you could answer the following questions, thinking about
+        how you have been, on average, over the PAST FOUR WEEKS.
+      </p>
+
+      <form id="lutsqol">
+        <ol>
+          {% for question in questionlist %}
+          <li>
+            <ol>
+              <li>
+                question
+              </li>
+              <!--{% for i in range(x) %}
+              <div class="form-check">
+                <input id=question+"a" class="form-check-input" type="radio" name= value=/>
+                <label for=question+"a" class="form-check-label">Not at all</label>
+              </div>
+              {% end for %}-->
+              <li>
+                How much does this bother you?
+              </li>
+              <!--<div>
+                <label for="qoner">Not at all</label>
+                <input type="range" class="custom-range" min="0" max="10" id="qoner" >
+                <label for="qoner">A great deal</label>
+              </div>-->
+            </ol>
+          </li>
+          {% end for %}
+          <!--
+          <li>
+            <ol>
+              <li>
+                Does your urinary problem affect your job, or your normal daily activities outside the home?
+              </li>
+              <div class="form-check">
+                <input id="qtwoa" class="form-check-input" type="radio" name="qtwo" value="1"/>
+                <label for="qtwoa" class="form-check-label">Not at all</label>
+              </div>
+              <div class="form-check">
+                <input id="qtwob" class="form-check-input" type="radio" name="qtwo" value="2"/>
+                <label for="qtwob" class="form-check-label">Slightly</label>
+              </div>
+              <div class="form-check">
+                <input id="qtwoc" class="form-check-input" type="radio" name="qtwo" value="3"/>
+                <label for="qtwoc" class="form-check-label">Moderately</label>
+              </div>
+              <div class="form-check">
+                <input id="qtwod" class="form-check-input" type="radio" name="qtwo" value="4"/>
+                <label for="qtwod" class="form-check-label">A lot</label>
+              </div>
+              <li>
+                How much does this bother you?
+              </li>
+              <div>
+                <label for="qtwor">Not at all</label>
+                <input type="range" class="custom-range" min="0" max="10" id="qtwor" >
+                <label for="qtwor">A great deal</label>
+              </div>
+            </ol>
+          </li>
+          <li>
+            <ol>
+              <li>
+                Does your urinary problem affect your physical activities (e.g. going for a walk, run, sport, gym, etc.)?
+              </li>
+              <div class="form-check">
+                <input id="qthreea" class="form-check-input" type="radio" name="qthree" value="1"/>
+                <label for="qthreea" class="form-check-label">Not at all</label>
+              </div>
+              <div class="form-check">
+                <input id="qthreeb" class="form-check-input" type="radio" name="qthree" value="2"/>
+                <label for="qthreeb" class="form-check-label">Slightly</label>
+              </div>
+              <div class="form-check">
+                <input id="qthreec" class="form-check-input" type="radio" name="qthree" value="3"/>
+                <label for="qthreec" class="form-check-label">Moderately</label>
+              </div>
+              <div class="form-check">
+                <input id="qthreed" class="form-check-input" type="radio" name="qthree" value="4"/>
+                <label for="qthreed" class="form-check-label">A lot</label>
+              </div>
+              <li>
+                How much does this bother you?
+              </li>
+              <div>
+                <label for="qthreer">Not at all</label>
+                <input type="range" class="custom-range" min="0" max="10" id="qthreer" >
+                <label for="qthreer">A great deal</label>
+            </ol>
+          </li>
+          <li>
+            <ol>
+              <li>
+                Does your urinary problem affect your ability to travel?
+              </li>
+              <div class="form-check">
+                <input id="qfoura" class="form-check-input" type="radio" name="qfour" value="1"/>
+                <label for="qfoura" class="form-check-label">Not at all</label>
+              </div>
+              <div class="form-check">
+                <input id="qfourb" class="form-check-input" type="radio" name="qfour" value="2"/>
+                <label for="qfourb" class="form-check-label">Slightly</label>
+              </div>
+              <div class="form-check">
+                <input id="qfourc" class="form-check-input" type="radio" name="qfour" value="3"/>
+                <label for="qfourc" class="form-check-label">Moderately</label>
+              </div>
+              <div class="form-check">
+                <input id="qfourd" class="form-check-input" type="radio" name="qfour" value="4"/>
+                <label for="qfourd" class="form-check-label">A lot</label>
+              </div>
+              <li>
+                How much does this bother you?
+              </li>
+              <div>
+                <label for="qfourr">Not at all</label>
+                <input type="range" class="custom-range" min="0" max="10" id="qfourr" >
+                <label for="qfourr">A great deal</label>
+            </ol>
+          </li>
+          <li>
+            <ol>
+              <li>
+                Does your urinary problem limit your social life?
+              </li>
+              <div class="form-check">
+                <input id="qfivea" class="form-check-input" type="radio" name="qfive" value="1"/>
+                <label for="qfivea" class="form-check-label">Not at all</label>
+              </div>
+              <div class="form-check">
+                <input id="qfiveb" class="form-check-input" type="radio" name="qfive" value="2"/>
+                <label for="qfiveb" class="form-check-label">Slightly</label>
+              </div>
+              <div class="form-check">
+                <input id="qfivec" class="form-check-input" type="radio" name="qfive" value="3"/>
+                <label for="qfivec" class="form-check-label">Moderately</label>
+              </div>
+              <div class="form-check">
+                <input id="qfived" class="form-check-input" type="radio" name="qfive" value="4"/>
+                <label for="qfived" class="form-check-label">A lot</label>
+              </div>
+              <li>
+                How much does this bother you?
+              </li>
+              <div>
+                <label for="qfiver">Not at all</label>
+                <input type="range" class="custom-range" min="0" max="10" id="qfiver" >
+                <label for="qfiver">A great deal</label>
+            </ol>
+          </li>
+          <li>
+            <ol>
+              <li>
+                Does your urinary problem limit your ability to see/visit friends?
+              </li>
+              <div class="form-check">
+                <input id="qsixa" class="form-check-input" type="radio" name="qsix" value="1"/>
+                <label for="qsixa" class="form-check-label">Not at all</label>
+              </div>
+              <div class="form-check">
+                <input id="qsixb" class="form-check-input" type="radio" name="qsix" value="2"/>
+                <label for="qsixb" class="form-check-label">Slightly</label>
+              </div>
+              <div class="form-check">
+                <input id="qsixc" class="form-check-input" type="radio" name="qsix" value="3"/>
+                <label for="qsixc" class="form-check-label">Moderately</label>
+              </div>
+              <div class="form-check">
+                <input id="qsixd" class="form-check-input" type="radio" name="qsix" value="4"/>
+                <label for="qsixd" class="form-check-label">A lot</label>
+              </div>
+              <li>
+                How much does this bother you?
+              </li>
+              <div>
+                <label for="qsixr">Not at all</label>
+                <input type="range" class="custom-range" min="0" max="10" id="qsixr" >
+                <label for="qsixr">A great deal</label>
+            </ol>
+          </li>
+          <li>
+            <ol>
+              <li>
+                Does your urinary problem affect your relationship with your partner?
+              </li>
+              <div class="form-check">
+                <input id="qsevenn" class="form-check-input" type="radio" name="qseven" value="8"/>
+                <label for="qsevenn" class="form-check-label">Not applicable</label>
+              </div>
+              <div class="form-check">
+                <input id="qsevena" class="form-check-input" type="radio" name="qseven" value="1"/>
+                <label for="qsevena" class="form-check-label">Not at all</label>
+              </div>
+              <div class="form-check">
+                <input id="qsevenb" class="form-check-input" type="radio" name="qseven" value="2"/>
+                <label for="qsevenb" class="form-check-label">Slightly</label>
+              </div>
+              <div class="form-check">
+                <input id="qsevenc" class="form-check-input" type="radio" name="qseven" value="3"/>
+                <label for="qsevenc" class="form-check-label">Moderately</label>
+              </div>
+              <div class="form-check">
+                <input id="qsevend" class="form-check-input" type="radio" name="qseven" value="4"/>
+                <label for="qsevend" class="form-check-label">A lot</label>
+              </div>
+              <li>
+                How much does this bother you?
+              </li>
+              <div>
+                <label for="qsevenr">Not at all</label>
+                <input type="range" class="custom-range" min="0" max="10" id="qsevenr" >
+                <label for="qsevenr">A great deal</label>
+            </ol>
+          </li>
+          <li>
+            <ol>
+              <li>
+                Does your urinary problem affect your sex life?
+              </li>
+              <div class="form-check">
+                <input id="qeightn" class="form-check-input" type="radio" name="qeight" value="8"/>
+                <label for="qeightn" class="form-check-label">Not applicable</label>
+              </div>
+              <div class="form-check">
+                <input id="qeighta" class="form-check-input" type="radio" name="qeight" value="1"/>
+                <label for="qeighta" class="form-check-label">Not at all</label>
+              </div>
+              <div class="form-check">
+                <input id="qeightb" class="form-check-input" type="radio" name="qeight" value="2"/>
+                <label for="qeightb" class="form-check-label">Slightly</label>
+              </div>
+              <div class="form-check">
+                <input id="qeightc" class="form-check-input" type="radio" name="qeight" value="3"/>
+                <label for="qeightc" class="form-check-label">Moderately</label>
+              </div>
+              <div class="form-check">
+                <input id="qeightd" class="form-check-input" type="radio" name="qeight" value="4"/>
+                <label for="qeightd" class="form-check-label">A lot</label>
+              </div>
+              <li>
+                How much does this bother you?
+              </li>
+              <div>
+                <label for="qeightr">Not at all</label>
+                <input type="range" class="custom-range" min="0" max="10" id="qeightr" >
+                <label for="qeightr">A great deal</label>
+            </ol>
+          </li>
+          <li>
+            <ol>
+              <li>
+                Does your urinary problem affect your family life?
+              </li>
+              <div class="form-check">
+                <input id="qninen" class="form-check-input" type="radio" name="qnine" value="8"/>
+                <label for="qninen" class="form-check-label">Not applicable</label>
+              </div>
+              <div class="form-check">
+                <input id="qninea" class="form-check-input" type="radio" name="qnine" value="1"/>
+                <label for="qninea" class="form-check-label">Not at all</label>
+              </div>
+              <div class="form-check">
+                <input id="qnineb" class="form-check-input" type="radio" name="qnine" value="2"/>
+                <label for="qnineb" class="form-check-label">Slightly</label>
+              </div>
+              <div class="form-check">
+                <input id="qninec" class="form-check-input" type="radio" name="qnine" value="3"/>
+                <label for="qninec" class="form-check-label">Moderately</label>
+              </div>
+              <div class="form-check">
+                <input id="qnined" class="form-check-input" type="radio" name="qnine" value="4"/>
+                <label for="qnined" class="form-check-label">A lot</label>
+              </div>
+              <li>
+                How much does this bother you?
+              </li>
+              <div>
+                <label for="qniner">Not at all</label>
+                <input type="range" class="custom-range" min="0" max="10" id="qniner" >
+                <label for="qniner">A great deal</label>
+            </ol>
+          </li>
+          <li>
+            <ol>
+              <li>
+                Does your urinary problem make you feel depressed?
+              </li>
+              <div class="form-check">
+                <input id="qtena" class="form-check-input" type="radio" name="qten" value="1"/>
+                <label for="qtena" class="form-check-label">Not at all</label>
+              </div>
+              <div class="form-check">
+                <input id="qtenb" class="form-check-input" type="radio" name="qten" value="2"/>
+                <label for="qtenb" class="form-check-label">Slightly</label>
+              </div>
+              <div class="form-check">
+                <input id="qtenc" class="form-check-input" type="radio" name="qten" value="3"/>
+                <label for="qtenc" class="form-check-label">Moderately</label>
+              </div>
+              <div class="form-check">
+                <input id="qtend" class="form-check-input" type="radio" name="qten" value="4"/>
+                <label for="qtend" class="form-check-label">Very much</label>
+              </div>
+              <li>
+                How much does this bother you?
+              </li>
+              <div>
+                <label for="qtenr">Not at all</label>
+                <input type="range" class="custom-range" min="0" max="10" id="qtenr" >
+                <label for="qtenr">A great deal</label>
+            </ol>
+          </li>
+          <li>
+            <ol>
+              <li>
+                Does your urinary problem make you feel anxious or nervous?
+              </li>
+              <div class="form-check">
+                <input id="qelevena" class="form-check-input" type="radio" name="qeleven" value="1"/>
+                <label for="qelevena" class="form-check-label">Not at all</label>
+              </div>
+              <div class="form-check">
+                <input id="qelevenb" class="form-check-input" type="radio" name="qeleven" value="2"/>
+                <label for="qelevenb" class="form-check-label">Slightly</label>
+              </div>
+              <div class="form-check">
+                <input id="qelevenc" class="form-check-input" type="radio" name="qeleven" value="3"/>
+                <label for="qelevenc" class="form-check-label">Moderately</label>
+              </div>
+              <div class="form-check">
+                <input id="qelevend" class="form-check-input" type="radio" name="qeleven" value="4"/>
+                <label for="qelevend" class="form-check-label">Very much</label>
+              </div>
+              <li>
+                How much does this bother you?
+              </li>
+              <div>
+                <label for="qelevenr">Not at all</label>
+                <input type="range" class="custom-range" min="0" max="10" id="qelevenr" >
+                <label for="qelevenr">A great deal</label>
+            </ol>
+          </li>
+          <li>
+            <ol>
+              <li>
+                Does your urinary problem make you feel bad about yourself?
+              </li>
+              <div class="form-check">
+                <input id="qtwelvea" class="form-check-input" type="radio" name="qtwelve" value="1"/>
+                <label for="qtwelvea" class="form-check-label">Not at all</label>
+              </div>
+              <div class="form-check">
+                <input id="qtwelveb" class="form-check-input" type="radio" name="qtwelve" value="2"/>
+                <label for="qtwelveb" class="form-check-label">Slightly</label>
+              </div>
+              <div class="form-check">
+                <input id="qtwelvec" class="form-check-input" type="radio" name="qtwelve" value="3"/>
+                <label for="qtwelvec" class="form-check-label">Moderately</label>
+              </div>
+              <div class="form-check">
+                <input id="qtwelved" class="form-check-input" type="radio" name="qtwelve" value="4"/>
+                <label for="qtwelved" class="form-check-label">Very much</label>
+              </div>
+              <li>
+                How much does this bother you?
+              </li>
+              <div>
+                <label for="qtwelver">Not at all</label>
+                <input type="range" class="custom-range" min="0" max="10" id="qtwelver" >
+                <label for="qtwelver">A great deal</label>
+            </ol>
+          </li>
+          <li>
+            <ol>
+              <li>
+                Does your urinary problem affect your sleep?
+              </li>
+              <div class="form-check">
+                <input id="qthirteena" class="form-check-input" type="radio" name="qthirteen" value="1"/>
+                <label for="qthirteena" class="form-check-label">Not at all</label>
+              </div>
+              <div class="form-check">
+                <input id="qthirteenb" class="form-check-input" type="radio" name="qthirteen" value="2"/>
+                <label for="qthirteenb" class="form-check-label">Slightly</label>
+              </div>
+              <div class="form-check">
+                <input id="qthirteenc" class="form-check-input" type="radio" name="qthirteen" value="3"/>
+                <label for="qthirteenc" class="form-check-label">Moderately</label>
+              </div>
+              <div class="form-check">
+                <input id="qthirteend" class="form-check-input" type="radio" name="qthirteen" value="4"/>
+                <label for="qthirteend" class="form-check-label">A lot</label>
+              </div>
+              <li>
+                How much does this bother you?
+              </li>
+              <div>
+                <label for="qthirteenr">Not at all</label>
+                <input type="range" class="custom-range" min="0" max="10" id="qthirteenr" >
+                <label for="qthirteenr">A great deal</label>
+            </ol>
+          </li>
+          <li>
+            <ol>
+              <li>
+                Do you feel worn out/tired?
+              </li>
+              <div class="form-check">
+                <input id="qfourteena" class="form-check-input" type="radio" name="qfourteen" value="1"/>
+                <label for="qfourteena" class="form-check-label">Not at all</label>
+              </div>
+              <div class="form-check">
+                <input id="qfourteenb" class="form-check-input" type="radio" name="qfourteen" value="2"/>
+                <label for="qfourteenb" class="form-check-label">Slightly</label>
+              </div>
+              <div class="form-check">
+                <input id="qfourteenc" class="form-check-input" type="radio" name="qfourteen" value="3"/>
+                <label for="qfourteenc" class="form-check-label">Moderately</label>
+              </div>
+              <div class="form-check">
+                <input id="qfourteend" class="form-check-input" type="radio" name="qfourteen" value="4"/>
+                <label for="qfourteend" class="form-check-label">A lot</label>
+              </div>
+              <li>
+                How much does this bother you?
+              </li>
+              <div>
+                <label for="qfourteenr">Not at all</label>
+                <input type="range" class="custom-range" min="0" max="10" id="qfourteenr" >
+                <label for="qfourteenr">A great deal</label>
+            </ol>
+          </li>
+          <h5>Do you do any of the following? If so, how much?</h6>
+          <li>
+            <ol>
+              <li>
+                Wear pads to keep dry?
+              </li>
+              <div class="form-check">
+                <input id="qfifteena" class="form-check-input" type="radio" name="qfifteen" value="1"/>
+                <label for="qfifteena" class="form-check-label">Not at all</label>
+              </div>
+              <div class="form-check">
+                <input id="qfifteenb" class="form-check-input" type="radio" name="qfifteen" value="2"/>
+                <label for="qfifteenb" class="form-check-label">Slightly</label>
+              </div>
+              <div class="form-check">
+                <input id="qfifteenc" class="form-check-input" type="radio" name="qfifteen" value="3"/>
+                <label for="qfifteenc" class="form-check-label">Moderately</label>
+              </div>
+              <div class="form-check">
+                <input id="qfifteend" class="form-check-input" type="radio" name="qfifteen" value="4"/>
+                <label for="qfifteend" class="form-check-label">A lot</label>
+              </div>
+              <li>
+                How much does this bother you?
+              </li>
+              <div>
+                <label for="qfifteenr">Not at all</label>
+                <input type="range" class="custom-range" min="0" max="10" id="qfifteenr" >
+                <label for="qfifteenr">A great deal</label>
+            </ol>
+          </li>
+          <li>
+            <ol>
+              <li>
+                Be careful how much fluid you drink?
+              </li>
+              <div class="form-check">
+                <input id="qsixteena" class="form-check-input" type="radio" name="qsixteen" value="1"/>
+                <label for="qsixteena" class="form-check-label">Not at all</label>
+              </div>
+              <div class="form-check">
+                <input id="qsixteenb" class="form-check-input" type="radio" name="qsixteen" value="2"/>
+                <label for="qsixteenb" class="form-check-label">Slightly</label>
+              </div>
+              <div class="form-check">
+                <input id="qsixteenc" class="form-check-input" type="radio" name="qsixteen" value="3"/>
+                <label for="qsixteenc" class="form-check-label">Moderately</label>
+              </div>
+              <div class="form-check">
+                <input id="qsixteend" class="form-check-input" type="radio" name="qsixteen" value="4"/>
+                <label for="qsixteend" class="form-check-label">A lot</label>
+              </div>
+              <li>
+                How much does this bother you?
+              </li>
+              <div>
+                <label for="qsixteenr">Not at all</label>
+                <input type="range" class="custom-range" min="0" max="10" id="qsixteenr" >
+                <label for="qsixteenr">A great deal</label>
+            </ol>
+          </li>-->
+        </ol>
+
+
+
+
+
+          <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+{% endblock %}
